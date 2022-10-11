@@ -11,11 +11,17 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MoviesService } from './movies.service';
 import { NgModule } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FavlistComponent } from './Favoritesmovie/favlist/favlist.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent
+    MovieListComponent,
+    FavlistComponent,
+    AboutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
