@@ -17,14 +17,15 @@
         <div class="col-sm-4 mb-5" *ngFor="let movie of  movieList | paginate: { itemsPerPage: 6, currentPage: p }">
             <div class="card">
                 <img class="card-img-top" [src]="movie.Poster" alt="Card image cap" height="200px">
-                <div class="card-body">
+                <div class="card-body ">
                     <p class="card-title moviename">{{movie.Title}}</p>
-                    <p class="card-text "> Year:{{movie.Year}}</p>
-                    <!-- <p  class="card-text">{{movie.Plot}} </p> -->
+                    <p class="card-text pr-2"> Year:{{movie.Year}}</p>
+
+                    
                 </div>
 
                 <div class="row p-4 mb-2">
-                    <div class="col"><i class="fas fa-star"></i> {{movie.imdbRating}}</div>
+                    <div class="col"><i class="fas fa-star" (click)="addtofavourite(movie.Title)"></i> {{movie.imdbRating}}</div>
                     <div class="col d-flex justify-content-end"><i class="fas fa-info-circle float-right"
                             (click)="openModal(template,movie)"></i></div>
                 </div>

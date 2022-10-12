@@ -9,14 +9,19 @@ import { Observable } from 'rxjs';
 })
 export class MoviesService {
   public mockUrl = '../assets/db/data.json';
+  public mockUrlTrending='../assets/db/trending.json';
 
   constructor(private http: HttpClient) {}
 
   getAllMovies() {
     return this.http.get<any>(this.mockUrl);
   }
+gettrendMovie(){
+  return this.http.get<any>(this.mockUrlTrending);
 
-  // searchMovies(query: string): Observable<any[]> {
+}
+
+ // searchMovies(query: string): Observable<any[]> {
   //   return this.http.get(this.mockUrl).pipe(map((data:any) => this.filterMovies(query, data as any[])));
   // }
 }

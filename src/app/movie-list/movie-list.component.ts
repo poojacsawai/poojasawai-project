@@ -49,7 +49,12 @@ export class MovieListComponent implements OnInit {
     this.modalRef.hide();
     this.modalRef = null;
   }
-
+  addtofavourite(title:any)
+  {
+    
+    localStorage.setItem("favmovie",title);
+    
+  }
   getMovie() {
     this.movieList = [];
     this.moviesService.getAllMovies().subscribe((data) => {

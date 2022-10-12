@@ -4,16 +4,60 @@
       <div class="top">
         <h4>Trending Movies</h4>
       </div>
+      <div class="row movielist">
+        <div class="col-sm-4 mb-5" *ngFor="let movies of trendmovieList">
+          <div class="card">
+            <img
+              class="card-img-top"
+              [src]="movies.Poster"
+              alt="Card image cap"
+              height="180px"
+            />
+            <div class="card-body">
+              <p class="card-text ">{{ movies.Title }}</p>
+              <!-- <p class="card-text">Year:{{ movies.Year }}</p> -->
+              <span><a href="">{{movies.Website}}</a> </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="theatre-movies">
       <div class="top">
-        <h4>Popular in Theatres</h4>
+        <h4>Popular Theatres:</h4>
+        <span class="text-warning">ODEON</span>
+        <span class="text-warning"> RIALTO.</span>
       </div>
+    
     </div>
   </div>
   <div class="popular-movies">
     <h4>All Time Popular</h4>
-    <div class="movies">
-    </div>
+  
+        <div class="row text-center">
+          <div class="">
+            <img
+              src="/assets/images/alltimepopular5.jpg"
+              alt=""
+              class="w-50 mb-2 mb-md-4 shadow-1-strong rounded"
+            />
+            
+          </div>
+          <div>
+            <img
+              src="/assets/images/alltimepopular4.jpg"
+              alt=""
+              class="w-50 mb-2 shadow-1-strong rounded"
+            />
+          </div>
+          <div class="">
+            <img
+              src="/assets/images/alltimepopular3.jpg"
+              alt=""
+              class="w-50 shadow-1-strong rounded"
+            />
+          </div>
+        </div>
+    
   </div>
 </div>
