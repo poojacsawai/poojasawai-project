@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="row p-4 mb-2">
-                    <div class="col"><i class="fas fa-star" (click)="addtofavourite(movie.Title)"></i> {{movie.imdbRating}}</div>
+                    <div class="col"><i class="fas fa-star"  (click)="addtofavourite(movie)"></i> {{movie.imdbRating}}</div>
                     <div class="col d-flex justify-content-end"><i class="fas fa-info-circle float-right"
                             (click)="openModal(template,movie)"></i></div>
                 </div>
@@ -57,7 +57,7 @@
                 <img src="{{movieDetails.Poster}}" alt="movieimg">
             </div>
             <div class="col">
-                <h4> {{movieDetails.Title | uppercase}} </h4><br />
+                <!-- <h4> {{movieDetails.Title | uppercase}} </h4><br /> -->
                 <h5> Actors:</h5> {{movieDetails.Actors}}<br>
                 <h5>Awards</h5>{{movieDetails.Awards}}<br>
                 <b> BoxOffice:</b> {{movieDetails.BoxOffice}} <br>

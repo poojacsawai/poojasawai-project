@@ -1,10 +1,10 @@
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 import { MoviesService } from '../movies.service';
 
 @Component({
-  selector: 'app-movie-list',
+  selector: 'app-movie-list' ,
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss'],
 })
@@ -14,6 +14,7 @@ export class MovieListComponent implements OnInit {
   modalRef2?: BsModalRef;
 
   movieList: any = [];
+ favmovieList:any=[];
   name: any = null;
   items: any;
   filteredItems: any;
@@ -49,11 +50,11 @@ export class MovieListComponent implements OnInit {
     this.modalRef.hide();
     this.modalRef = null;
   }
-  addtofavourite(title:any)
+  addtofavourite(movie:any)
   {
-    
-    localStorage.setItem("favmovie",title);
-    
+    this.favmovieList=[];
+    this.favmovieList.push(movie);
+    // localStorage.setItem("favmovie",title);
   }
   getMovie() {
     this.movieList = [];
